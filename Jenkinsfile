@@ -27,7 +27,7 @@ pipeline {
         stage('Push') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'dockercrd') {
                         docker.image('neelpatel5270/day_15:latest').push()
                     }
                 }
