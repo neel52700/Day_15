@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/neel52700/Day_15.git'
+                git branch: 'main', url: 'https://github.com/neel52700/Day_15.git'
             }
         }
         stage('Build') {
