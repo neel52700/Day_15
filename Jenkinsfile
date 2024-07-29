@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.build('day_15:latest')
+                    docker.build('neelpatel5270/day_15:latest')
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials') {
-                        docker.image('day_15:latest').push()
+                        docker.image('neelpatel5270/day_15:latest').push()
                     }
                 }
             }
